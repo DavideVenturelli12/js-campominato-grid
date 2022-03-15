@@ -1,0 +1,30 @@
+/*generics*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*content*/
+#griglia{
+    width: 550px;
+    height: 550px;
+    margin: 50px auto;
+    background-color: lightgrey;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cella {
+  width: calc(100% / 10);
+  height: calc(100% / 10);
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cella.bg-lightblue {
+  background-color: rgb(9, 173, 238);
+}
