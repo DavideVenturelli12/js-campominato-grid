@@ -16,19 +16,34 @@ while (isNaN(difficoltà) || difficoltà > 3 || difficoltà < 1) {
     difficoltà = parseInt(prompt('scegli il livello di difficoltà, da 1 a 3'));
 }
 
-// Creare una griglia 10*10. 
+// Creare una griglia
 const griglia = document.getElementById('griglia');
 
-const colonne = 10;
-const righe = 10;
+let celleTotali;
 
-// calcolo il totale delle celle da generare
-const celleTotali = colonne * righe;
+// calcolo il totale delle celle da generare in base alla difficoltà
+if (difficoltà === 1) {
+    celleTotali = 100;
+} else if (difficoltà === 2) {
+    celleTotali = 81;
+} else if (difficoltà === 3) {
+    celleTotali = 49;
+}
+
 
 for (let i = 1; i <= celleTotali; i++) {
 
     // creo la cella
     const cella = creaCella();
+
+    if (celleTotali === 100) {
+        cella.classList.add('facile');
+    } else if (celleTotali === 81) {
+        cella.classList.add('medio');
+    } else if (celleTotali === 49) {
+        cella.classList.add('difficile');
+    }
+
     //inserisco i numeri nelle celle
     cella.innerText = i;
 

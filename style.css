@@ -5,26 +5,43 @@
     margin: 0;
 }
 
+body{
+  font-family: sans-serif;
+  text-align: center;
+}
+
 /*content*/
 #griglia{
     width: 550px;
     height: 550px;
     margin: 50px auto;
-    background-color: lightgrey;
-    border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
 }
 
 .cella {
-  width: calc(100% / 10);
-  height: calc(100% / 10);
   border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: lightgrey;
 }
 
 .cella.bg-lightblue {
   background-color: rgb(9, 173, 238);
+}
+
+.cella.facile{
+  height: calc(100% / 10);
+  width: calc(100% / 10);
+}
+
+.cella.medio{
+  height: calc(100% / 9);
+  width: calc(100% / 9);
+}
+
+.cella.difficile{
+  height: calc(100% / 7);
+  width: calc(100% / 7);
 }
